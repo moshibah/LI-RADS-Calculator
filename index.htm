@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>LI-RADS v2018 Calculator</title>
+
+<link rel="stylesheet" href="./liradsstyle11.css">
+<script src="./liradsjavav11.js?69"></script>
+
+</head>
+
+<body>
+
+<div id="site">
+<div id="row">
+<div id="cell">
+
+<h1> LI-RADS v2018 Calculator</h1>
+
+
+<p>If unsure about the presence of any major feature: characterize that feature as absent. </p>
+<form>
+<div id="approp">
+	<p>1. Does the patient have cirrhosis, chronic hepatitis B, current or prior HCC? <br>
+		<input type="radio" id="criteria" name="criteria" value="yes" onclick="Proceed()"> Yes
+		<input type="radio" id="criteria" name="criteria" value="no" onclick="GoHome()"> No
+			</p><p id="appropriate"> </p>
+	<p></p>
+</div>
+
+<div id="crit">
+	2. Does the lesion correspond with any of the following criteria?<br>
+		<input type="radio" id="lesioncrit" name="lesioncrit" value="1" onclick="questiontwo()"> The lesion is definitely benign. <br>
+		<div id="LIRADS1">LR-1 Definitely Benign </div> 
+		<input type="radio" id="lesioncrit" name="lesioncrit" value="2" onclick="questiontwo()"> The lesion is probably benign. <br>
+		<div id="LIRADS2">LR-2 Probably Benign </div> 
+		<input type="radio" id="lesioncrit" name="lesioncrit" value="3" onclick="questiontwo()"> The lesion is probably or definitely malignant but not HCC specific. <br>
+		<div id="malignant">LR-M </div> 
+		<input type="radio" id="lesioncrit" name="lesioncrit" value="4" onclick="questiontwo()"> There is definite tumor in vein.<br>
+		<div id="TIVV">LR-TIV </div> 
+		<input type="radio" id="lesioncrit" name="lesioncrit" value="5" onclick="questiontwo()"> None of the above. <br>	
+		
+
+<div id="calculator">
+
+<div id="furtherchar">
+
+<ul>
+
+
+	
+	<li>APHE: Does the lesion hyperenhance on arterial phase images (non rim)? <br>
+		<input type="radio" name="enhance" value="1"> Yes 
+		<input type="radio" name="enhance" value="0"> No 
+	</li>
+
+
+	<li>SIZE: How big is the lesion in millimeters? <br>
+		<input type="radio" name="size" value="3"> &gt;=20 mm 
+		<input type="radio" name="size" value="2"> 10-19 mm
+		<input type="radio" name="size" value="1"> &lt;10 mm
+	</li>
+
+
+	<li>MAJOR FEATURE: Does the lesion washout on later phases (non peripheral)? <br>
+		<input type="radio" name="washout" value="1"> Yes 
+		<input type="radio" name="washout" value="0"> No 
+	</li>
+
+
+	<li>MAJOR FEATURE: Is there an enhancing capsule? <br>
+		<input type="radio" name="capsule" value="1"> Yes 
+		<input type="radio" name="capsule" value="0"> No 
+	</li>
+
+	<li>MAJOR FEATURE: Has the lesion increased in size by &gt;50% in &lt;=6 months: <br>
+		<input type="radio" name="incsize" value="1"> Yes
+		<input type="radio" name="incsize" value="0"> No 
+	</li>
+
+
+	<li>Are there ancillary features that could be used to upgrade or downgrade the lesion? (Available for reference) <br>
+		<input type="radio" name="TIV" value="yes" onclick="ANC()"> Yes
+		<input type="radio" name="TIV" value="no" onclick="NANC()"> No <br>
+	</li>
+
+<table id="ANC">
+<tbody><tr>
+	<th> Favoring malignancy in general, not HCC in particular </th>
+	<th> Favoring HCC in particular </th>
+	<th> Favoring benignity </th>
+</tr>
+
+<tr>
+<td>
+<ul>
+<li>Ultrasound visibility as discrete nodule </li>
+<li>subthreshold growth</li>
+<li>restricted diffusion</li>
+<li>Mild-moderate T2 hyperintensity</li>
+<li>Corona enhancement</li>
+<li>Fat sparing in solid mass</li>
+<li>Iron sparing in solid mass</li>
+<li>Transitional phase hypointensity</li>
+<li>Hepatobiliary phase hypointensity</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Nonenhancing "capsule"</li>
+<li>Nodule-in-nodule</li>
+<li>Mosaic architecture</li>
+<li>Blood products in mass</li>
+<li>Fat in mass, more than adjacent liver</li>
+</ul>
+</td>
+<td>
+<li>Size Stability &gt;2 years</li>
+<li>Size reduction</li>
+<li>Parallels blood pool</li>
+<li>Undistorted vessels</li>
+<li>Iron in mass, more than liver</li>
+<li>Marked T2 hyperintensity</li>
+<li>Hepatobiliary phase isointensity</li>
+</td>
+</tr>
+</tbody></table>
+
+
+
+<br> <button id="submit" type="button" onclick="LIRADSALG()"> Calculate LI-RADS </button> 
+
+<div id="LIRADS"> </div>
+
+</ul>
+
+<ui>
+	<div>
+
+	<img src="./diagcrit.jpg" alt="Diagnostic Criteria" height="auto" width="100%">
+	<div style="padding: .75rem 1.25rem; border: 1px solid transparent; border-radius: .25rem; color: #856404; background-color: #fff3cd; border-color: #ffeeba;"><b>Disclaimer:</b> The author makes no claims of the accuracy of the information contained herein; this information is for educational purposes only and is not a substitute for clinical judgment. This calculator is based upon the American College of Radiology (ACR) LIRADS classification but is not officially endorsed by the ACR.</div>
+	
+	</div>
+</ui>
+
+</div>	
+</div>		
+</div>
+</form>
+</div> 
+</div>
+</div>
+</body>
+<p>Updated and maintained by <a title="Ali Moshibah" href="http://moshibah.com" rel="nofollow" onclick="javascript:window.open('http://moshibah.com'); return false;">Ali Moshibah</a></p>
+</html>

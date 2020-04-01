@@ -1,0 +1,99 @@
+	body {
+background-color: lightgrey;
+	}
+	
+
+	#ANC {    
+	width: 700px;
+    padding: 50px 0;
+    text-align: left;
+    background-color: white;
+    margin-top: 20px;
+	display: none;
+	background-color: lightblue;
+	}
+	
+	th {
+	text-align: center;
+	}
+	
+	td {
+	text-align: left;
+	}
+	
+	#site {
+	display:table; 
+	}
+	
+	#row {
+	display:table-row;
+	}
+	
+	#cell {
+	display:table-cell;
+	padding: 30px;
+	}
+
+	
+	#LIRADS, #LRTR {
+	font-size: 30pt;
+	font-weight: bold;
+	display: inline-block;
+	text-align: center;
+	border-radius: 25px;
+	padding: 4px;
+	}
+	
+	#TIVcalc, #crit, #furtherchar, #TIVcrit, #LIRADS1, #LIRADS2, #malignant, #TIVV {
+	display: none;
+	}
+	
+	#calculator {
+	background-color: lightblue;
+	border-radius: 25px;
+	padding:1px;
+	display: none;
+	}
+	
+	#LIRADS2 {
+	background-color: #91EB00;
+	text-align: center;
+	font-size: 16pt;
+	border-radius: 25px;
+	padding: 5px;
+	}
+	
+	#LIRADS1 {
+	background-color: #00C100;
+	font-size: 16pt;
+	text-align: center;
+	border-radius: 25px;
+	padding: 5px;
+	}
+	
+	#malignant {
+	background-color: #931101;
+	color: white;
+	text-align: center;
+	font-size: 16pt;
+	border-radius: 25px;
+	padding: 5px;
+	}
+
+	#TIVV {
+		background-color: black;
+		color: white;
+		text-align: center;
+		font-size: 16pt;
+		border-radius: 25px;
+		padding: 5px;
+		}
+
+	#appropriate {
+	text-align: center;
+	background-color: black;
+	color: white;
+	font-size: 14pt;
+	border-radius: 25px;
+	}
+	
