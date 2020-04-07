@@ -118,43 +118,26 @@ function LIRADSALG() {
 		L = "LR-4";}
 	else if (a==0 && b==3 && maj==0) {
 		L = "LR-3";}
+	
+	
+	else if (a==0 && b==3 && maj>=2) {
+		L = "LR-4";
+	} else if (a==0 && b==3 && maj==1) {
+		L = "LR-4";}
+	else if (a==0 && b==3 && maj==0) {
+		L = "LR-3";}
+	
+	
+	else if (a==0 && b==3 && maj>=2) {
+		L = "LR-4";
+	} else if (a==0 && b==3 && maj==1) {
+		L = "LR-3";}
+	else if (a==0 && b==3 && maj==0) {
+		L = "LR-3";}
+	
 
 
 
-	else if (a==0 && b==2 && c==1 && d==1 && e==1) {
-		L = "LR-4";}
-	else if (a==0 && b==2 && c==1 && d==1) {
-		L = "LR-4";}
-	else if (a==0 && b==2 && c==1 && e==1) {
-		L = "LR-4";}
-	else if (a==0 && b==2 && d==1 && e==1) {
-		L = "LR-4";}
-	else if (a==0 && b==2 && e==1) {
-		L = "LR-3";}
-	else if (a==0 && b==2 && c==1) {
-		L = "LR-3";}
-	else if (a==0 && b==2 && d==1) {
-		L = "LR-3";}
-	else if (a==0 && b==2 && maj==0) {
-		L = "LR-3";}
-
-    else if (a==0 && b==1 && c==1 && d==1 && e==1) {
-        L = "LR-4";}
-    else if (a==0 && b==1 && c==1 && d==1) {
-        L = "LR-4";}
-    else if (a==0 && b==1 && c==1 && e==1) {
-        L = "LR-4";}
-    else if (a==0 && b==1 && d==1 && e==1) {
-        L = "LR-4";}
-    else if (a==0 && b==1 && e==1) {
-        L = "LR-3";}
-    else if (a==0 && b==1 && c==1) {
-        L = "LR-3";}
-    else if (a==0 && b==1 && d==1) {
-        L = "LR-3";}
-    else if (a==0 && b==1 && maj==0) {
-        L = "LR-3";}      
-    
 
 
 	document.getElementById("LIRADS").innerHTML = L;
